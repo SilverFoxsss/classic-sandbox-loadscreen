@@ -22,7 +22,7 @@
             position: relative;
         }
 
-        /* Simplified animated gradient background */
+        /* Fixed animated gradient background - no movement */
         .gradient-bg {
             position: fixed;
             top: 0;
@@ -33,18 +33,17 @@
                 #667eea 0%, 
                 #764ba2 50%, 
                 #f093fb 100%);
-            animation: gradientShift 20s ease infinite alternate;
+            animation: gradientPulse 20s ease infinite alternate;
             opacity: 0.8;
             z-index: 0;
-            will-change: transform;
         }
 
-        @keyframes gradientShift {
+        @keyframes gradientPulse {
             0% {
-                transform: scale(1) rotate(0deg);
+                opacity: 0.8;
             }
             100% {
-                transform: scale(1.1) rotate(5deg);
+                opacity: 0.9;
             }
         }
 
